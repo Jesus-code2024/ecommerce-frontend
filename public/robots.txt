@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+Sitemap: https://ecommerce-frontend-eight-opal.vercel.app/sitemap.xml
