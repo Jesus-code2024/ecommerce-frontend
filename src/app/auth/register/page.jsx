@@ -113,22 +113,6 @@ export default function RegisterPage() {
               />
               <p className="mt-1 text-xs text-gray-500">Mínimo 6 caracteres</p>
             </div>
-
-            <div>
-              <label htmlFor="rol" className="block text-sm font-medium text-gray-700 mb-1">
-                Tipo de Cuenta
-              </label>
-              <select
-                id="rol"
-                name="rol"
-                value={formData.rol}
-                onChange={handleChange}
-                className="appearance-none relative block w-full px-3 py-2 border border-gray-300 text-gray-900 bg-white rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              >
-                <option value="CLIENTE">Cliente</option>
-                <option value="ADMIN">Administrador</option>
-              </select>
-            </div>
           </div>
 
           <div>
