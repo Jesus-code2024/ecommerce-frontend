@@ -15,16 +15,16 @@ export default function Home() {
           <div className="absolute top-40 left-40 w-80 h-80 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
           {/* Contenido Hero */}
-          <div className="text-center mb-20">
-            <div className="inline-block mb-6">
-              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-yellow-400 text-gray-900 shadow-lg">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <div className="inline-block mb-4 sm:mb-6">
+              <span className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-yellow-400 text-gray-900 shadow-lg">
                 ✨ Bienvenido a tu tienda online favorita
               </span>
             </div>
             
-            <h1 className="text-6xl md:text-7xl font-extrabold text-white mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 sm:mb-8 leading-tight px-4">
               Descubre productos
               <br />
               <span className="bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-100 bg-clip-text text-transparent drop-shadow-2xl">
@@ -32,19 +32,19 @@ export default function Home() {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-blue-50 mb-12 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-lg">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-50 mb-8 sm:mb-10 lg:mb-12 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-lg px-4">
               La mejor selección de productos con precios inigualables. 
               Compra de forma fácil, rápida y segura.
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
               <Link
                 href="/shop/productos"
-                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-900 bg-white rounded-xl overflow-hidden shadow-2xl hover:shadow-blue-400/50 transition-all duration-300 transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-blue-900 bg-white rounded-xl overflow-hidden shadow-2xl hover:shadow-blue-400/50 transition-all duration-300 transform hover:scale-105"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   🛍️ Explorar Catálogo
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
@@ -52,11 +52,11 @@ export default function Home() {
               
               <Link
                 href="/auth/register"
-                className="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-900 bg-yellow-400 border-2 border-yellow-500 rounded-xl hover:bg-yellow-500 hover:border-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-blue-900 bg-yellow-400 border-2 border-yellow-500 rounded-xl hover:bg-yellow-500 hover:border-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 <span className="flex items-center gap-2">
                   🎉 Crear Cuenta
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                   </svg>
                 </span>
@@ -65,17 +65,17 @@ export default function Home() {
           </div>
 
           {/* Estadísticas */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-8 max-w-4xl mx-auto mt-12 sm:mt-16 lg:mt-20 px-4">
             {[
               { icon: '🎯', number: '1000+', label: 'Productos' },
               { icon: '⭐', number: '4.9/5', label: 'Calificación' },
               { icon: '📦', number: '24h', label: 'Envío Express' },
               { icon: '🔒', number: '100%', label: 'Seguro' },
             ].map((stat, index) => (
-              <div key={index} className="text-center transform hover:scale-110 transition-transform bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-4 shadow-lg">
-                <div className="text-4xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-blue-100 text-sm font-semibold">{stat.label}</div>
+              <div key={index} className="text-center transform hover:scale-110 transition-transform bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-3 sm:p-4 shadow-lg">
+                <div className="text-2xl sm:text-3xl lg:text-4xl mb-1 sm:mb-2">{stat.icon}</div>
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1">{stat.number}</div>
+                <div className="text-blue-100 text-xs sm:text-sm font-semibold">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -83,20 +83,20 @@ export default function Home() {
 
         {/* Onda decorativa */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
             <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
           </svg>
         </div>
       </div>
 
       {/* Sección de Características */}
-      <div className="py-20 bg-white">
+      <div className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
               ¿Por qué elegirnos?
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               Ofrecemos la mejor experiencia de compra online
             </p>
           </div>
